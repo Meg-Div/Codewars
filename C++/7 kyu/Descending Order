@@ -1,0 +1,20 @@
+#include <string>
+#include <algorithm>
+#include <iostream>
+#include <cstdlib> 
+
+using namespace std;
+
+uint64_t descendingOrder(uint64_t a)
+{
+  uint64_t value;
+  string number = to_string(a);
+
+  sort(number.begin(), number.end());
+  reverse(number.begin(),number.end()); 
+  
+  stringstream iss(number);
+  iss >> value;
+  
+  return value;
+}
