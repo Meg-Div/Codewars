@@ -1,0 +1,11 @@
+function expandedForm(num) {
+  num = num
+    .toString()
+    .split("")
+    .map((val, i, elem) => val * Math.pow(10, elem.length - i - 1))
+    .filter((n) => n > 0)
+    .join(" + ");
+  return num;
+}
+
+console.log(expandedForm(5002));
