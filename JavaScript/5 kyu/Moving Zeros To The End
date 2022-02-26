@@ -1,0 +1,12 @@
+var moveZeros = function (arr) 
+{
+  let zeros = arr.filter((elem) => elem === 0);
+  
+  arr = arr.filter((elem) => elem !== 0)
+  
+  for(let elem of zeros) 
+  {
+    arr.push(elem)
+  }
+  return arr
+}
