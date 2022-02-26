@@ -1,0 +1,23 @@
+#include <string>
+#include <iomanip>
+#include <iostream>
+
+using namespace std;
+
+std::vector<int> digitize(unsigned long n) 
+{        
+  string str = to_string(n); 
+  reverse(str.begin(), str.end());
+  vector<int> backwards; 
+  int number;
+  string character;
+  
+  for (size_t i = 0; i < str.size(); ++i) 
+  {
+    character = str.at(i);
+    number = atoi(character.c_str());
+    backwards.push_back(number);
+  }
+  
+  return backwards;
+}
