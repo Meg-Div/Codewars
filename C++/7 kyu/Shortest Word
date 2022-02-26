@@ -1,0 +1,29 @@
+#include <string>
+#include <sstream>
+#include <istream>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+  
+int find_short(string str)
+{
+    string word;
+    vector <size_t> intDataPoints;
+    size_t size;
+    
+    istringstream inSS(str);
+    inSS.clear();
+    inSS.str(str);
+    
+    while (inSS) 
+    {
+        inSS >> word; 
+        size = word.length();
+        intDataPoints.push_back(size);
+    }
+    
+    sort (intDataPoints.begin(), intDataPoints.end());
+    
+    return intDataPoints[0];
+}
