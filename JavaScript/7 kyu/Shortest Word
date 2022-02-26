@@ -1,0 +1,13 @@
+function findShort(str) 
+{
+  counter = str.length;
+  arr = str.split(" ");
+  for (let elem of arr) 
+  {
+    if (elem.length < counter) 
+    {
+      counter = elem.length;
+    }
+  }
+  return counter;
+}
