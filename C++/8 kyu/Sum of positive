@@ -1,0 +1,10 @@
+#include <vector>
+
+int positive_sum (const std::vector<int> arr)
+{
+  int total = 0;
+  
+  for (int num : arr) num > 0 ? total += num : total = total;
+  
+  return total;
+}
