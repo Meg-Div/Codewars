@@ -1,0 +1,16 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+std::string odd_or_even(const std::vector<int> &arr)
+{
+  int total = 0;
+  string str = "";
+  
+  for (int num : arr) total += num;
+  
+  total % 2 != 0 ? str = "odd" : str = "even";
+  
+  return str;
+}
